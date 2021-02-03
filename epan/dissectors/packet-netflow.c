@@ -8569,6 +8569,8 @@ proto_register_netflow(void)
                                    10, &v9_tmplt_max_fields);
 
     register_init_routine(&netflow_init);
+   
+    register_dissector("cflow", dissect_netflow, proto_netflow);
 }
 
 
